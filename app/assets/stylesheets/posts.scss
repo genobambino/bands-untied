@@ -1,0 +1,42 @@
+.post-page {
+	textarea#message-text {
+		background-color: white;
+	}
+	form#new_comment {
+		margin-bottom: -25px;
+	}
+	textarea#comment_body {
+		width: 335px;
+		border-radius: 0px;
+	}
+	h6.time-posted {
+		margin-left: 55px;
+		margin-top: -5px;
+	}
+	input[type="submit"] {
+		color: black;
+		background-color: white;
+		border-radius: 10px;
+		height: 30px;
+		width: 100px;
+		margin-left: 295px;
+	}
+	input:hover[type="submit"] {
+		background-color: #A3A4A6;
+		padding-right: 10px;
+	}
+	.panel-heading-gray {
+		padding: 10px 15px;
+		border-bottom: 1px solid transparent;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		color: #333;
+		background-color: #f5f5f5;
+		border-color: #848484;
+			img {
+                width: 50px;
+                border-radius: 4px;
+				height: 35px;
+            }
+	}
+}

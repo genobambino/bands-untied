@@ -1,0 +1,57 @@
+.edit-post-page {
+	.panel-default {
+		border-color: #ddd;
+		margin-top: 12px;
+		margin-left: 80px;
+
+	}
+	.panel-heading {
+		padding: 10px 15px;
+		border-bottom: 1px solid transparent;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		color: #fff;
+		background-color: #337ab7;
+		border-color: #337ab7;
+			h1 {
+				font-size: 2em;
+				margin: 0.67em 0;
+				margin-left: 110px;
+					.img {
+						width: 50px;
+						height: 50px;
+						border-radius: 4px;
+						margin-bottom: -80px;
+				}
+			}
+			
+	}
+	textarea {
+		resize: none;
+		overflow: auto;
+		color: black;
+		border-radius: 10px;
+		box-shadow: 0px 2px 5px rgba(0,0,0, 0.3);
+		width: 300px;	
+			textarea#post_body {
+				color: red;
+				background-color: green;
+				-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+			}
+	}
+	input[type="submit"] {
+		color: black;
+		background-color: white;
+		border-radius: 10px;
+		height: 30px;
+		width: 100px;
+		margin-left: 200px;
+	}
+	input:hover[type="submit"] {
+		background-color: #A3A4A6;
+		padding-right: 10px;
+	}
+}

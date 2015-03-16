@@ -1,0 +1,77 @@
+<div class="welcome">
+	<div class="container">
+					
+					<% if session[:user_id] == nil %>
+						<% unless controller.action_name == "login" %>
+							<h1>Welcome to BandsUnited</h1><br>
+							<h3>What we offer!</h3>
+							<ul>
+							 <li><b>Find new music!</b></li>
+							 <li><b>Follow your favorite artist!</b></li>
+							 <li><b>Gain more fans!</b></li>
+							</ul>  
+							<br>
+							<br>
+							<br>
+							<br>
+							<div class="sign_up_form">
+								<%= form_for @user, :html => { :multipart => true } do |f| %>
+								<div class="clearfix">
+									<div class="first-name-field">
+									    <%= f.label :first_name %>
+									    <%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
+									  </div>
+									  <div class="last-name-field">
+									    <%= f.label :last_name %>
+									    <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+									  </div>
+								</div>
+								  <div class="field">
+								    <%= f.label :name %><br>
+								    <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+								  </div>
+								  <div class="field">
+								    <%= f.label :email %><br>
+								    <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
+								  </div>
+								  <div class="field">
+								    <%= f.label :age %><br>
+								    <%= f.number_field :age, placeholder: "Age", class: "form-control" %>
+								  </div>
+								  <div class="field">
+								    <%= f.label :password %><br>
+								    <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+								  </div>
+								  <div class="field">
+								    <%= f.label :password_confirmation %><br>
+								    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "form-control" %>
+								   <div class="field"><br>
+									<%= f.label :profile_picture %><br>
+									<%= f.file_field :profile_picture %>
+								    </div>
+								  </div><br>
+								  <div class="actions">
+								    <%= f.submit "Create Account", class: "btn btn-default btn-sign-up" %>
+								  </div>
+								  
+								<% end %>
+							</div><br>
+							<br>
+							<br>
+							<br>
+							
+								
+						<% end %>							
+					<% else %>	
+						
+						<div class="well">
+						
+							<h1>Welcome to your Newsfeed!</h1>
+						</div>
+						
+
+					<% end %>
+	</div>
+</div>
+
+

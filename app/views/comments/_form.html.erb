@@ -1,0 +1,9 @@
+<%= form_for([post, @comment]) do |f| %>
+	<p>
+		
+		<%= f.text_area :body, placeholder: "Write a comment!" %>
+	</p>
+	<br>
+	<p> <%= f.submit %> </p>
+	
+<% end %>

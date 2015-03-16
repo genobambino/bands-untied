@@ -1,0 +1,49 @@
+<div class ="newsfeed">
+	<div class="col-md-3">
+		  			<div class="thumbnail">
+
+						<%= image_tag @user.profile_picture.url(:medium) %>
+							<div class="caption">
+								<p><%= link_to @user.name, dashboard_path %></p>
+							</div>
+					</div>
+					<div class="newsfeed-items">
+						<h5 class="home"> <i class="fa fa-home"></i> <%= link_to 'Home', dashboard_path %> </h5>
+						<h5 class="Messages"> <i class="fa fa-envelope-o">   </i> <%= link_to 'Messages', dashboard_path %> </h5>
+						<h5 class="Pictures"> <i class="fa fa-picture-o"></i> <%= link_to 'Pictures', dashboard_path %> </h5>
+						<h5 class="Music"> <i class="fa fa-music"></i>  <%= link_to 'Music', dashboard_path %> </h5>
+					</div>
+	</div>
+	<div class="col-md-4">
+		<div class="panel panel-default">	
+		  	<%= form_for :post, url: posts_path do |f| %>
+		  		<div class="panel-heading">
+		  			<i class="fa fa-pencil-square"></i> <%= f.label :Status  %> |<br>
+		  		</div>
+				<div class="panel-body">
+					<%= f.text_area :body, placeholder: "What's new?" %>
+				</div>
+				<h6 class="submit">	
+					<%= f.submit %>
+				</h6>					  	
+		  	<% end %>
+		</div>
+		<h6 class="info-box">
+			Friendsfeed       |      Musicianfeed
+		</h6>
+		<%- @posts.each do |post| %>
+			<div class="user-post-panel">
+				<div class="user-post-panel-header">
+					<h4>User Post</h4>
+				</div>
+				<div class="user-post-body">
+					<h2 class="title"><%= link_to post.body, post %></h2>	
+				</div>
+				<div class="user-post-footer">
+					<p class="date"><%= post.created_at.strftime("%B, %d, %Y") %> </p>
+				</div>
+			</div>
+		<% end %>
+
+	</div>
+</div>

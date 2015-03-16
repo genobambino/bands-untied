@@ -1,0 +1,33 @@
+.welcome {
+	.well {
+		margin-top: 50px;
+		background-color: #ffffff;
+		border: 2px solid #000000;
+		-moz-border-radius: 24px;
+		-webkit-border-radius: 24px;
+		border-radius: 24px;
+		-moz-box-shadow: 0px 0px 12px transparent;
+		-webkit-box-shadow: 0px 0px 12px transparent;
+		box-shadow: 0px 0px 12px transparent;
+	}
+	h4 {
+		
+		color: white;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.sign_up_form {
+		margin-left: 745px;
+		margin-bottom: 0px;
+		margin-top: -285px;
+	}
+	.first-name-field {
+		width: 182px;
+	}
+	.last-name-field {
+		float: right;
+		margin-top: -60px;
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+<div class="login_page">
+	<div class="container">
+		<div class="row">
+				<div class="well">
+					<div class="login_form">
+						
+							
+
+						<h1>Login to Your Account Below:</h1>
+						<div class="login">
+							<div class="form_group">
+								<%= form_tag("/logging/user", method: "post", class: "navbar-form") do %>
+								<%= label_tag :name, 'Name:' %>
+								<%= text_field_tag :name, params[:name], placeholder: "Name", class: "form-control" %>
+								<%= label_tag :password, 'Password:' %>
+								<%= password_field_tag :password, params[:password], placeholder: "Password", class: "form-control" %> 
+								<%= submit_tag "Login", class: "btn btn-default btn-login" %>
+								<% end %>
+							</div>
+						<p>Don't have an Account?</p> 
+						<p>Become a <%= link_to 'New User', new_user_path %>!</p>
+
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>			
+	</div>
+</div>
+

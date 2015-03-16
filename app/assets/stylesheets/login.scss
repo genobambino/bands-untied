@@ -1,0 +1,23 @@
+.login_page {
+	.well {
+		margin-top: 50px;
+		background-color: #f5f5f5;
+		border: 2px solid #000000;
+		-moz-border-radius: 24px;
+		-webkit-border-radius: 24px;
+		border-radius: 24px;
+		-moz-box-shadow: 0px 0px 12px transparent;
+		-webkit-box-shadow: 0px 0px 12px transparent;
+		box-shadow: 0px 0px 12px transparent;
+	}
+	.login_form {
+		text-align: center;
+		font-size: 15px;
+	}
+	.input, textarea, keygen, select, button {
+
+	}
+	.p {
+		color: black;
+	}
+}

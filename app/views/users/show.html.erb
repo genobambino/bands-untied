@@ -1,0 +1,82 @@
+<div class="show">
+	
+				  	<div class="col-md-3"> 			  		
+						    <div class="thumbnail">
+						    
+						      
+						      <% else %>
+								<%= image_tag @user.profile_picture.url(:medium) %>
+
+						     
+						      <div class="caption">
+						        <h2><%= @user.name %></h2>
+						        <p>Message This User  <i class="fa fa-envelope-o fa-lg">   </i></p>
+						        <p>Report This User   <i class="fa fa-exclamation fa-lg">    </i></p>
+						        <p>Block this User    <i class="fa fa-user-times fa-lg">   </i></p>			<p><a href="#" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add As Friend</a> <a href="#" class="btn btn-default" role="button">Follow</a></p>
+						      </div>
+						    </div>
+						    	<div class="panel panel-default">
+							    	<div class="panel-heading">Bio for <%= @user.first_name %></div>
+							    	<p class="bio">
+										<%= @user.bio %>
+									</p>
+								</div>
+					</div>
+
+					  <div class="col-md-4">
+						<div class="panel panel-default">	
+						  	<%= form_for :post, url: posts_path do |f| %>
+						  		<div class="panel-heading">
+						  			<i class="fa fa-pencil-square"></i> <%= f.label :Status  %> |<br>
+						  		</div>
+								<div class="panel-body">
+									<%= f.text_area :body, placeholder: "What's new?" %>
+								</div>
+								<p>	
+									<%= f.submit %>
+								</p>					  	
+						  	<% end %>
+						</div>
+						<%- @posts.each do |post| %>
+							<div class="panel panel-default">
+						
+								<div class="panel-heading-gray"> <%= image_tag @user.profile_picture.url(:thumb) %> <h5 class="user-name"><%= @user.name %></h5> <h6 class="time-posted"><%= post.created_at.strftime("%B, %d, %Y") %></h6></div>
+								<div class="panel-body"><%= link_to post.body, post %></div>
+								<div class="panel-footer"> 
+							
+									<%= render post.comments %>
+									<p class="Like-option">Like ·</p>
+									<p class="comment-form">Comment</p>  
+									<p class="view-option">· View</p>
+									<p class="comment-profile-picture">
+									<%= image_tag @user.profile_picture.url(:thumb) %>
+									</p>
+									<%= @post.comments.count %>
+									<div id="comments-form">
+										<%=	 render "comments/form", :post => post %>
+										
+									</div>	
+								</div> 
+								</div>
+						<% end %>
+
+							
+					  </div>
+
+					  <div class="col-md-4">
+					  	
+						
+					  	
+					  </div>
+<script type="text/javascript">
+	function slideOpen(el) {
+		var elem = document.getElementById(el);
+		elem.style.transition = "height 0.5s linear 0s";
+		elem.style.height = "200px";
+
+	}
+
+</script>
+
+</div>
+

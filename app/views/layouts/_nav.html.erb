@@ -1,0 +1,74 @@
+<div class="nav">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="navbar navbar-static-top navbar-inverse navbar-bands-united">
+						
+					<div class="navbar-header">
+					  
+						<%= link_to 'BandsUnited', root_path, class: "navbar-brand" %>
+						
+							<div class="search_box">
+								
+									<form method="get" action="/search" id="search">
+							  			<input name="q" type="text" size="40" placeholder="Search..." />
+
+									</form>
+						
+						</div>
+
+					</div>
+					
+					<div class="navbar-right navbar-login">
+						<% if session[:user_id] == nil %>
+							<% unless controller.action_name == "login" %>
+									<%= form_tag("/logging/user", method: "post", class: "navbar-form") do %>
+										<div class="form-group">
+											<%= text_field_tag :name, params[:name], placeholder: "Name", class: "form-control" %>
+											<%= password_field_tag :password, params[:password], placeholder: "Password", class: "form-control" %> 
+											<%= submit_tag "Login", class: "btn btn-default btn-login" %>
+										</div>
+									<% end %>
+							<% end %> 
+							
+							
+						<% else %>
+							
+
+							<div class="dropdown pull-right">
+							  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							    <span class="glyphicon glyphicon-menu-down"></span>
+							  </button>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							    <li role="presentation"></li>
+							    <li role="presentation"><%= link_to 'Edit', edit_user_path(@signed_in_user) %></li>
+							    <li role="presentation"><%= link_to 'Logout', logout_path %></li>
+							  </ul>
+							</div>
+								
+							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#user-menu" aria-expanded="false" aria-controls="collapseExample">
+							  <span class='glyphicon glyphicon-menu-hamburger'></span>
+							</button>
+
+							<div class="user-picture"><%= image_tag @user.profile_picture.url(:thumb) %> </div>
+
+							<div class="user-name"><%= link_to @user.first_name, dashboard_path %> | <%= link_to 'Home', newsfeed_path %> </div>
+
+							
+							
+									
+						<% end %>
+					</div>
+				</div>
+				<div class="collapse" id="user-menu">
+					<ul class="nav nav-pills nav-user-menu">
+					  <li role="presentation"><%= link_to 'Home', newsfeed_path %></li>
+					  <li role="presentation"><%= link_to 'Profile', dashboard_path %></li>
+					  <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>			
+					</ul>
+				</div>
+			</div>
+			
+
+			
+		</div>
+</div>

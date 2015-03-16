@@ -1,0 +1,86 @@
+.post-page {
+	textarea {
+		resize: none;
+		overflow: auto;
+		color: black;
+		border-radius: 10px;
+		box-shadow: 0px 2px 5px rgba(0,0,0, 0.3);
+		width: 380px;	
+			textarea#post_body {
+				color: red;
+				background-color: green;
+				-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+	            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+			}
+	}
+	input[type="submit"] {
+		color: black;
+		background-color: white;
+		border-radius: 10px;
+		height: 30px;
+		width: 100px;
+		margin-left: 295px;
+	}
+	input:hover[type="submit"] {
+		background-color: #A3A4A6;
+		padding-right: 10px;
+	}
+	.user-status {
+		display: block;
+		padding-top: 20px;
+		margin-top: -12px;
+		border-radius: 4px;
+	}
+	.thumbnail {
+		width: 300px;
+		display: block;
+		padding: 4px;
+		margin-bottom: 20px;
+		line-height: 1.42857143;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		margin-top: 12px;
+			.btn-default {
+				color: #333;
+				background-color: #fff;
+				border-color: #ccc;
+					&.btn-default:hover {
+						background-color: #A3A4A6;
+					}
+				}
+	}
+	.panel {
+		margin-top: 12px;
+		margin-bottom: 20px;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+		box-shadow: 0 1px 1px rgba(0,0,0,.05);
+			.panel-heading {
+				padding: 10px 15px;
+				border-bottom: 1px solid transparent;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				color: #fff;
+				background-color: #337ab7;
+				border-color: #337ab7;
+			}
+	}
+	
+	.panel-heading-gray {
+		padding: 10px 15px;
+		border-bottom: 1px solid transparent;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		color: #333;
+		background-color: #f5f5f5;
+		border-color: #848484;
+	}
+	i.fa.fa-times {
+		float: right;
+	}
+}
